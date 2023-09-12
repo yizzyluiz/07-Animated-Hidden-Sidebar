@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(20, 20, 20);
+  font-family: sans-serif;
+  perspective: 1000px;
+}
+
+.content {
+  background-color: rgb(63, 0, 122);
+  border: 1px solid rgb(63, 0, 122);
+  position : relative;
+  padding-bottom: 5rem;
+  transform-origin: center left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.content.active {
+  transform: translateX(200px) rotateY(20deg);
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 7rem;
+  background: rgb(0, 0, 0);
+  padding: 4rem;
+  border-radius: 0.8rem;
+  color: rgb(255, 174, 1);
+}
+
+.container h1 {
+  margin-bottom: 5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+form label {
+  margin-bottom: 5px;
+}
+
+form label .special {
+  color: crimson;
+}
+
+form input {
+  margin-bottom: 2rem;
+  outline: none;
+  height: 30px;
+  padding: 15px;
+}
+
+.sidebar {
+  background: rgb(255, 174, 1);
+  color: #000000;
+  padding: 10px 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  transform: translateX(-200px);
+  transition: transform 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin: 30px 0;
+}
+
+.sidebar ul li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.sidebar .menu .fa-bars {
+  display: block;
+}
+
+.sidebar .menu .fa-times {
+  display: none;
+}
+
+.sidebar.active .menu .fa-bars {
+  display: none;
+}
+
+.sidebar.active .menu .fa-times {
+  display: block;
+}
+
+.menu {
+  background-color: crimson;
+  color: #000000;
+  border: none;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: -30px;
+  height: 30px;
+  width: 30px;
+  outline: none;
+}
+
+
